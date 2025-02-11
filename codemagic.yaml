@@ -1,11 +1,13 @@
 workflows:
   android-build:
     name: Android Build Workflow
-    android:
-      # تحديد إصدار Android SDK
-      sdk: stable
-      build:
-        # تحديد الأوامر الخاصة بالبناء
+    flutter:
+      version: stable
+    build:
+      android:
+        # يمكنك إضافة إعدادات البناء هنا، مثل تحديد إصدار SDK إذا لزم الأمر
+        gradle:
+          version: 7.0
         commands:
           - flutter pub get
           - flutter build apk
