@@ -2,7 +2,7 @@ workflows:
   android-build:
     name: Android Build Workflow
     flutter:
-      version: stable
+      version: 1.0.0
     build:
       android:
         # يمكنك إضافة إعدادات البناء هنا، مثل تحديد إصدار SDK إذا لزم الأمر
