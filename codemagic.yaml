@@ -1,15 +1,10 @@
 workflows:
   android-build:
     name: Android Build Workflow
-    flutter:
-      version: 1.0.0
-    build:
-      android:
-        # يمكنك إضافة إعدادات البناء هنا، مثل تحديد إصدار SDK إذا لزم الأمر
-        gradle:
-          version: 7.0
-        commands:
-          - flutter pub get
-          - flutter build apk
+    environment:
+      flutter: stable
+    scripts:
+      - flutter pub get
+      - flutter build apk
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
